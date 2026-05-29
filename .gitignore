@@ -50,3 +50,5 @@ firestore-debug.log
 
 # OS
 Thumbs.db
+# vite
+/dist/

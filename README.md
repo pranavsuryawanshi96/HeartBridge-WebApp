@@ -1,4 +1,4 @@
-# 💝 HeartSync - Meaningful Connections Through Questions
+# 💝 HeartBridge - Meaningful Connections Through Questions
 
 A production-ready platform where users create meaningful questions, share them with loved ones, and receive heartfelt answers. Built with Next.js 14, Firebase, and Zustand.
 
@@ -38,6 +38,7 @@ npm run dev
 ## 📋 User Flows
 
 ### Creator Flow
+
 1. Land on maintenance page → Popup after 2s
 2. Navigate to About page → See cookie banner
 3. Click "Explore Now" → Home page
@@ -47,6 +48,7 @@ npm run dev
 7. View responses in dashboard
 
 ### Respondent Flow
+
 1. Receive link from creator
 2. Fill in personal information
 3. Answer questions one by one
@@ -85,12 +87,14 @@ question-connect/
 ## 🎯 Features Showcase
 
 ### Question Types
+
 - ✍️ **Text Questions** - Open-ended responses
 - ✅ **Yes/No Questions** - Radio button selection
 - 🔘 **Multiple Choice** - Select from options
 - 💍 **Marriage Proposal** - Special moving "No" button!
 
 ### Special Features
+
 - 🎉 Animated popup on landing
 - 🍪 Cookie-style banner on About page
 - 📊 Progress tracking for answers
@@ -134,11 +138,12 @@ Full setup guide in `PRODUCTION_SETUP_GUIDE.md`
 
 ## 📱 Screenshots
 
-*Coming soon - Deploy and add screenshots here!*
+_Coming soon - Deploy and add screenshots here!_
 
 ## 🎨 Customization
 
 Easy to customize:
+
 - Colors: Search and replace hex codes
 - Text: Edit component strings
 - Features: Add new question types
@@ -171,6 +176,7 @@ npm run lint
 ## 🎓 Learning Points
 
 This project demonstrates:
+
 - Full-stack Next.js development
 - Firebase integration
 - State management with Zustand
@@ -190,6 +196,7 @@ MIT License - feel free to use for your own projects!
 ## 🎯 For Recruiters
 
 This project showcases:
+
 - ✅ Full-stack capabilities
 - ✅ Modern React patterns
 - ✅ Database design & integration

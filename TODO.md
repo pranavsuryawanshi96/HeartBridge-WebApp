@@ -9,8 +9,6 @@
 - [x] README.md - Main documentation
 - [x] PRODUCTION_SETUP_GUIDE.md - Complete setup instructions
 
-### State Management
-- [x] store/useStore.js - Zustand stores for questions and answers
 
 ### Firebase
 - [x] lib/firebase.js - Firebase initialization
@@ -100,20 +98,6 @@ export const SpecialQuestion = ({ question, onAnswer }) => {
 - Relation select (Partner/Friend/Family/Other)
 - Mobile number input
 - Validation
-- Save to Zustand useAnswerStore
-
-### 6. NEXT.JS CONFIG
-**File:** `next.config.js`
-```javascript
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    domains: ['firebasestorage.googleapis.com'],
-  },
-}
-
-module.exports = nextConfig
 ```
 
 ### 7. GITIGNORE
@@ -125,11 +109,7 @@ module.exports = nextConfig
 .pnp.js
 
 # Testing
-/coverage
 
-# Next.js
-/.next/
-/out/
 
 # Production
 /build
@@ -212,7 +192,6 @@ yarn-error.log*
 With current files:
 ✅ Firebase connection setup
 ✅ Database helper functions ready
-✅ Zustand state management configured
 ✅ Maintenance page with popup (2 seconds)
 ✅ About page with cookie banner
 ✅ Moving No button component

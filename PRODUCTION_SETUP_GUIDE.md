@@ -1,9 +1,11 @@
 # 🚀 COMPLETE PRODUCTION SETUP GUIDE
-## HeartSync Platform - Ready for Deployment
+
+## HeartBridge Platform - Ready for Deployment
 
 ---
 
 ## 📋 Table of Contents
+
 1. [Project Overview](#project-overview)
 2. [Quick Start](#quick-start)
 3. [Firebase Setup](#firebase-setup)
@@ -18,7 +20,8 @@
 
 ## 🎯 Project Overview
 
-**HeartSync** is a production-ready platform where users can:
+**HeartBridge** is a production-ready platform where users can:
+
 - Create meaningful questions with multiple question types
 - Generate real, shareable links (not localhost!)
 - Collect answers from loved ones with their information
@@ -26,11 +29,12 @@
 - Encourage respondents to create their own questions
 
 **Tech Stack:**
-- **Frontend & Backend:** Next.js 14 (App Router)
-- **State Management:** Zustand
+
+- **Frontend:** React 19 (App Router)
+- **State Management:** Redux
 - **Database:** Firebase Firestore
 - **Animations:** Framer Motion
-- **Deployment:** Netlify
+- **Deployment:** Vercel
 - **Hosting:** Cloud-based (Firebase + Netlify)
 
 ---
@@ -38,6 +42,7 @@
 ## ⚡ Quick Start
 
 ### Prerequisites
+
 ```bash
 Node.js 18+ installed
 npm or yarn package manager
@@ -47,11 +52,13 @@ Git installed
 ### Installation Steps
 
 1. **Extract the project folder**
+
    ```bash
    cd question-connect
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
@@ -59,19 +66,22 @@ Git installed
 3. **Setup Firebase** (see Firebase Setup section below)
 
 4. **Create .env.local file**
+
    ```bash
    cp .env.example .env.local
    ```
+
    Then fill in your Firebase credentials
 
 5. **Run development server**
+
    ```bash
    npm run dev
    ```
 
 6. **Open browser**
    ```
-   http://localhost:3000
+   http://localhost:5173
    ```
 
 ---
@@ -89,7 +99,7 @@ Git installed
 ### Step 2: Register Web App
 
 1. In Firebase Console, click the **Web icon** (</>)
-2. App nickname: `HeartSync Web`
+2. App nickname: `HeartBridge Web`
 3. Check "Also set up Firebase Hosting" (optional)
 4. Click "Register app"
 5. **COPY** the configuration object shown
@@ -176,6 +186,7 @@ question-connect/
 ## ✨ Features Implemented
 
 ### 1. **Landing Flow**
+
 - ✅ Maintenance page loads first
 - ✅ Popup appears after 2 seconds
 - ✅ User can close popup and stay
@@ -184,105 +195,45 @@ question-connect/
 - ✅ "Explore Now" → Home page
 
 ### 2. **Question Types**
+
 - ✅ **Text Input:** Open-ended questions
 - ✅ **Radio Buttons:** Yes/No questions
 - ✅ **Multiple Choice:** Multiple options
 - ✅ **Special:** "Will you marry me?" with moving No button!
 
 ### 3. **State Management (Zustand)**
+
 - ✅ Global state for questions
 - ✅ Persistent storage (localStorage)
 - ✅ Creator and recipient info
 - ✅ Answer collection state
 
 ### 4. **Real Link Generation**
+
 - ✅ Unique IDs generated
 - ✅ Stored in Firebase
 - ✅ Accessible from anywhere
 - ✅ Not localhost - real production links!
 
 ### 5. **Answer Collection**
+
 - ✅ Collect: Name, Age, Gender, Relation, Mobile
 - ✅ Answer validation
 - ✅ Progress tracking
 - ✅ Submit to Firebase
 
 ### 6. **After Submission**
+
 - ✅ Thank you page
 - ✅ "Create Your Own" button
 - ✅ Encouraging text
 - ✅ Redirect to home page
 
 ### 7. **Dashboard (To Complete)**
+
 - ✅ View all answered questions
 - ✅ See respondent information
 - ✅ Filter by recipient name
-
----
-
-## 🌐 Deployment to Netlify
-
-### Method 1: Git Integration (Recommended)
-
-1. **Push to GitHub**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/yourusername/question-connect.git
-   git push -u origin main
-   ```
-
-2. **Connect to Netlify**
-   - Go to [Netlify](https://app.netlify.com/)
-   - Click "Add new site" → "Import an existing project"
-   - Choose GitHub
-   - Select your repository
-   - Build settings (auto-detected):
-     - Build command: `npm run build`
-     - Publish directory: `.next`
-   - Click "Deploy site"
-
-3. **Add Environment Variables**
-   - In Netlify Dashboard → Site settings → Environment variables
-   - Add all variables from `.env.local`
-   - Update `NEXT_PUBLIC_APP_URL` to your Netlify URL
-
-4. **Custom Domain (Optional)**
-   - Domain settings → Add custom domain
-   - Follow DNS instructions
-
-### Method 2: Netlify CLI
-
-```bash
-# Install Netlify CLI
-npm install -g netlify-cli
-
-# Login
-netlify login
-
-# Initialize
-netlify init
-
-# Deploy
-netlify deploy --prod
-```
-
-### Method 3: Manual Deploy
-
-```bash
-# Build the project
-npm run build
-
-# Install Netlify CLI
-npm install -g netlify-cli
-
-# Deploy
-netlify deploy --dir=.next --prod
-```
-
----
 
 ## 👥 User Flow
 
@@ -368,8 +319,9 @@ netlify deploy --dir=.next --prod
 ### Local Testing
 
 1. **Test Maintenance Flow:**
+
    ```
-   - Go to http://localhost:3000
+   - Go to http://localhost:5173
    - Wait 2 seconds for popup
    - Close popup
    - Click "Discover More"
@@ -377,6 +329,7 @@ netlify deploy --dir=.next --prod
    ```
 
 2. **Test About Page Banner:**
+
    ```
    - On About page
    - See cookie banner at bottom
@@ -385,6 +338,7 @@ netlify deploy --dir=.next --prod
    ```
 
 3. **Test Question Creation:**
+
    ```
    - Enter recipient name
    - Add text question
@@ -395,6 +349,7 @@ netlify deploy --dir=.next --prod
    ```
 
 4. **Test Answer Flow:**
+
    ```
    - Open generated link in new tab
    - Fill respondent info
@@ -416,6 +371,7 @@ netlify deploy --dir=.next --prod
 After deployment:
 
 1. **Test Real Links:**
+
    ```
    - Create questions on deployed site
    - Generate link
@@ -425,6 +381,7 @@ After deployment:
    ```
 
 2. **Test Mobile:**
+
    ```
    - Open on phone
    - Test all features
@@ -446,6 +403,7 @@ After deployment:
 ### Issue: Firebase not connecting
 
 **Solution:**
+
 ```bash
 # Check .env.local file exists
 ls -la .env.local
@@ -460,6 +418,7 @@ npm run dev
 ### Issue: "Module not found" errors
 
 **Solution:**
+
 ```bash
 # Delete node_modules and reinstall
 rm -rf node_modules package-lock.json
@@ -469,9 +428,10 @@ npm install
 ### Issue: Zustand state not persisting
 
 **Solution:**
+
 ```javascript
 // Check browser localStorage
-console.log(localStorage.getItem('question-connect-storage'));
+console.log(localStorage.getItem("question-connect-storage"));
 
 // Clear and restart
 localStorage.clear();
@@ -481,10 +441,8 @@ location.reload();
 ### Issue: Generated links are localhost
 
 **Solution:**
-```bash
-# Update .env.local
-NEXT_PUBLIC_APP_URL=https://your-deployed-url.netlify.app
 
+```
 # Restart server
 npm run dev
 ```
@@ -493,6 +451,7 @@ npm run dev
 
 **Solution:**
 Go to Firebase Console → Firestore → Rules and ensure:
+
 ```javascript
 allow read, write: if true;
 ```
@@ -500,6 +459,7 @@ allow read, write: if true;
 ### Issue: Netlify build fails
 
 **Solution:**
+
 ```bash
 # Check build locally first
 npm run build
@@ -515,15 +475,17 @@ npm run build
 ### Change Colors
 
 Find in components:
+
 ```javascript
 #ff9800 → Your primary color
-#03a9f4 → Your accent color  
+#03a9f4 → Your accent color
 #e91e63 → Your love/heart color
 ```
 
 ### Add More Question Types
 
 Create in `components/QuestionTypes.jsx`:
+
 ```javascript
 export const RatingQuestion = ({ question, onChange }) => {
   // Star rating component
@@ -533,12 +495,15 @@ export const RatingQuestion = ({ question, onChange }) => {
 ### Modify Moving No Button
 
 In `components/MovingNoButton.jsx`:
+
 ```javascript
 // Change attempts threshold
 if (attempts > 5) // Change 5 to your number
 
 // Change messages
-{attempts === 1 && "Your custom message!"}
+{
+  attempts === 1 && "Your custom message!";
+}
 ```
 
 ---
@@ -593,7 +558,7 @@ Before showing to recruiters:
 ✅ **UX/UI Design:** User flow, responsiveness, accessibility  
 ✅ **Production Deployment:** Netlify, environment variables  
 ✅ **Problem Solving:** Unique features (moving No button!)  
-✅ **Code Quality:** Clean, organized, commented  
+✅ **Code Quality:** Clean, organized, commented
 
 ### Key Features to Highlight:
 
@@ -625,10 +590,10 @@ Your Question Connection Platform is production-ready with:
 ✨ Shareable links that work globally  
 ✨ Complete user flows  
 ✨ Professional code quality  
-✨ Deploy-ready configuration  
+✨ Deploy-ready configuration
 
 **Now go impress those recruiters! 🚀💪**
 
 ---
 
-*Made with ❤️ for building meaningful connections*
+_Made with ❤️ for building meaningful connections_
