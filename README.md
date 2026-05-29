@@ -32,8 +32,6 @@ npm run dev
 - 💾 **Cloud Database** - Firebase Firestore for data storage
 - 📱 **Fully Responsive** - Works perfectly on all devices
 - 🎭 **Special Interactions** - Including the famous "moving No button" for proposals!
-- 🔄 **State Management** - Zustand for global state
-- 🌐 **Production Ready** - Deploy to Netlify with one click
 
 ## 📋 User Flows
 
