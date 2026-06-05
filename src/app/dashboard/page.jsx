@@ -179,27 +179,41 @@ export default function Dashboard() {
           borderBottom: "1px solid rgba(255,255,255,0.1)",
         }}
       >
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+        <Link
+          to="/"
           style={{
-            fontSize: "1.5rem",
-            fontWeight: "800",
-            background: "linear-gradient(135deg, #ff9800, #03a9f4)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            display: "flex",
-            flexDirection: "row",
-            gap: "0.75rem",
+            textDecoration: "none",
           }}
         >
-          <img
-            src="/heartbridge_logo.svg"
-            alt="HeartBridge Logo"
-            style={{ width: "40px", height: "40px", marginRight: "10px" }}
-          ></img>{" "}
-          HeartBridge
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            style={{
+              fontSize: "2.15rem",
+              fontWeight: "800",
+              background: "linear-gradient(135deg, #ff9800, #03a9f4)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: "1.25rem",
+              cursor: "pointer",
+            }}
+          >
+            <img
+              src="/heartbridge_logo.png"
+              alt="HeartBridge Logo"
+              style={{
+                width: "68px",
+                height: "38px",
+                objectFit: "contain",
+                display: "block",
+              }}
+            />
+            HeartBridge
+          </motion.div>
+        </Link>
 
         <div style={{ display: "flex", gap: "1.5rem" }}>
           <Link
